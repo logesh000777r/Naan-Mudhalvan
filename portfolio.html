@@ -1,0 +1,956 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Logeshwaran R — Professional Resume</title>
+  <meta name="description" content="Resume of Logeshwaran R: Software Engineer specializing in Java development, data structures, and full-stack solutions." />
+  <meta name="author" content="Logeshwaran R" />
+  <meta name="robots" content="index, follow" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      /* Light theme */
+      --bg-primary: #fefefe;
+      --bg-secondary: #f8fafc;
+      --bg-accent: #ffffff;
+      --text-primary: #0f172a;
+      --text-secondary: #475569;
+      --text-muted: #64748b;
+      --accent-primary: #2563eb;
+      --accent-secondary: #3b82f6;
+      --border-light: #e2e8f0;
+      --border-medium: #cbd5e1;
+      --chip-bg: #f1f5f9;
+      --chip-border: #e2e8f0;
+      --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+      --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+      --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+      --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      --gradient-accent: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg-primary: #0f172a;
+        --bg-secondary: #1e293b;
+        --bg-accent: #334155;
+        --text-primary: #f8fafc;
+        --text-secondary: #cbd5e1;
+        --text-muted: #94a3b8;
+        --accent-primary: #60a5fa;
+        --accent-secondary: #3b82f6;
+        --border-light: #334155;
+        --border-medium: #475569;
+        --chip-bg: #1e293b;
+        --chip-border: #334155;
+        --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.3);
+        --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.4), 0 2px 4px -2px rgb(0 0 0 / 0.4);
+        --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.4), 0 4px 6px -4px rgb(0 0 0 / 0.4);
+      }
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
+
+    body {
+      font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      background: var(--bg-primary);
+      color: var(--text-primary);
+      line-height: 1.6;
+      font-weight: 400;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      text-rendering: optimizeLegibility;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 2rem;
+      position: relative;
+    }
+
+    /* Enhanced Header */
+    .header {
+      background: var(--bg-accent);
+      border-radius: 24px;
+      padding: 3rem;
+      margin-bottom: 2rem;
+      box-shadow: var(--shadow-lg);
+      border: 1px solid var(--border-light);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .header::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 200px;
+      height: 200px;
+      background: var(--gradient-primary);
+      border-radius: 50%;
+      opacity: 0.1;
+      transform: translate(50%, -50%);
+    }
+
+    .header-content {
+      position: relative;
+      z-index: 2;
+    }
+
+    .name {
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      margin-bottom: 0.5rem;
+      background: var(--gradient-primary);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .title {
+      font-size: 1.25rem;
+      color: var(--text-secondary);
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+      letter-spacing: 0.01em;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 0.75rem 1rem;
+      background: var(--bg-secondary);
+      border-radius: 12px;
+      border: 1px solid var(--border-light);
+      transition: all 0.3s ease;
+      text-decoration: none;
+      color: var(--text-primary);
+    }
+
+    .contact-item:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+      border-color: var(--accent-primary);
+    }
+
+    .contact-icon {
+      font-size: 1.1rem;
+      color: var(--accent-primary);
+      min-width: 20px;
+    }
+
+    .contact-text {
+      font-weight: 500;
+      font-size: 0.9rem;
+    }
+
+    /* Action buttons */
+    .header-actions {
+      display: flex;
+      gap: 1rem;
+      margin-top: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.75rem 1.5rem;
+      border-radius: 12px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      font-size: 0.9rem;
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn-primary {
+      background: var(--accent-primary);
+      color: white;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .btn-primary:hover {
+      background: var(--accent-secondary);
+      transform: translateY(-1px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .btn-secondary {
+      background: var(--bg-secondary);
+      color: var(--text-primary);
+      border: 1px solid var(--border-medium);
+    }
+
+    .btn-secondary:hover {
+      background: var(--border-light);
+      transform: translateY(-1px);
+    }
+
+    /* Main grid layout */
+    .main-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 2rem;
+      align-items: start;
+    }
+
+    @media (max-width: 900px) {
+      .main-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+    }
+
+    /* Enhanced sections */
+    .section {
+      background: var(--bg-accent);
+      border-radius: 20px;
+      padding: 2rem;
+      margin-bottom: 1.5rem;
+      border: 1px solid var(--border-light);
+      box-shadow: var(--shadow-sm);
+      transition: all 0.3s ease;
+      position: relative;
+    }
+
+    .section:hover {
+      box-shadow: var(--shadow-md);
+      transform: translateY(-1px);
+    }
+
+    .section-title {
+      font-size: 1.1rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--text-secondary);
+      margin-bottom: 1.5rem;
+      position: relative;
+      padding-bottom: 0.5rem;
+    }
+
+    .section-title::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 60px;
+      height: 3px;
+      background: var(--gradient-primary);
+      border-radius: 2px;
+    }
+
+    /* Items */
+    .item {
+      margin-bottom: 2rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid var(--border-light);
+      position: relative;
+    }
+
+    .item:last-child {
+      margin-bottom: 0;
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+
+    .item-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 1rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .item-title {
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: var(--text-primary);
+      line-height: 1.4;
+    }
+
+    .item-subtitle {
+      color: var(--text-secondary);
+      font-weight: 500;
+      margin-top: 0.25rem;
+    }
+
+    .item-date {
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      font-weight: 500;
+      white-space: nowrap;
+      background: var(--chip-bg);
+      padding: 0.25rem 0.75rem;
+      border-radius: 20px;
+      border: 1px solid var(--chip-border);
+    }
+
+    /* Enhanced lists */
+    .item-list {
+      list-style: none;
+      margin: 1rem 0;
+    }
+
+    .item-list li {
+      position: relative;
+      padding-left: 1.5rem;
+      margin-bottom: 0.5rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+
+    .item-list li::before {
+      content: '▪';
+      position: absolute;
+      left: 0;
+      color: var(--accent-primary);
+      font-weight: bold;
+    }
+
+    /* Skills chips */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+      gap: 0.75rem;
+      margin-top: 1rem;
+    }
+
+    .skill-chip {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.75rem 1rem;
+      background: var(--chip-bg);
+      border: 1px solid var(--chip-border);
+      border-radius: 12px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      transition: all 0.3s ease;
+      text-align: center;
+    }
+
+    .skill-chip:hover {
+      background: var(--accent-primary);
+      color: white;
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-sm);
+    }
+
+    /* Project chips */
+    .project-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 1rem;
+    }
+
+    .project-chip {
+      padding: 0.4rem 0.8rem;
+      background: var(--chip-bg);
+      border: 1px solid var(--chip-border);
+      border-radius: 20px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--text-secondary);
+      transition: all 0.2s ease;
+    }
+
+    .project-chip:hover {
+      background: var(--accent-primary);
+      color: white;
+    }
+
+    /* Links */
+    .link {
+      color: var(--accent-primary);
+      text-decoration: none;
+      font-weight: 500;
+      border-bottom: 1px dashed var(--accent-primary);
+      transition: all 0.2s ease;
+    }
+
+    .link:hover {
+      color: var(--accent-secondary);
+      border-bottom-style: solid;
+    }
+
+    /* Progress indicators */
+    .progress-bar {
+      width: 100%;
+      height: 6px;
+      background: var(--border-light);
+      border-radius: 3px;
+      overflow: hidden;
+      margin: 0.5rem 0;
+    }
+
+    .progress-fill {
+      height: 100%;
+      background: var(--gradient-primary);
+      border-radius: 3px;
+      transition: width 0.8s ease;
+    }
+
+    /* Responsive design */
+    @media (max-width: 768px) {
+      .container {
+        padding: 1rem;
+      }
+
+      .header {
+        padding: 2rem;
+      }
+
+      .section {
+        padding: 1.5rem;
+      }
+
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .item-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+      }
+
+      .skills-grid {
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+      }
+    }
+
+    /* Print styles */
+    @media print {
+      body {
+        background: white;
+        color: black;
+      }
+
+      .header-actions,
+      .btn {
+        display: none !important;
+      }
+
+      .section {
+        break-inside: avoid;
+        box-shadow: none;
+        background: white;
+        border: 1px solid #ddd;
+        margin-bottom: 1rem;
+      }
+
+      .container {
+        padding: 0;
+      }
+
+      .main-grid {
+        gap: 1rem;
+      }
+
+      .skills-grid {
+        gap: 0.5rem;
+      }
+
+      .skill-chip,
+      .project-chip {
+        padding: 0.25rem 0.5rem;
+      }
+
+      .name {
+        -webkit-text-fill-color: initial;
+        color: black;
+      }
+    }
+
+    /* Animation classes */
+    .fade-in {
+      animation: fadeIn 0.6s ease-out;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .slide-in-left {
+      animation: slideInLeft 0.6s ease-out;
+    }
+
+    @keyframes slideInLeft {
+      from {
+        opacity: 0;
+        transform: translateX(-30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    .slide-in-right {
+      animation: slideInRight 0.6s ease-out;
+    }
+
+    @keyframes slideInRight {
+      from {
+        opacity: 0;
+        transform: translateX(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    /* Accessibility */
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    .connect-actions {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Logeshwaran R",
+    "jobTitle": "Software Engineer | Java Developer",
+    "email": "logeshwaranr2006@gmail.com",
+    "telephone": "+91-9843434575",
+    "url": "https://github.com/logesh000777r",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Erode",
+      "addressRegion": "Tamil Nadu",
+      "addressCountry": "IN"
+    },
+    "sameAs": [
+      "https://www.linkedin.com/in/logeshwaran R",
+      "https://github.com/logesh000777r"
+    ],
+    "knowsAbout": [
+      "Java",
+      "Python",
+      "Data Structures",
+      "Algorithms",
+      "Software Development",
+      "Full Stack Development"
+    ]
+  }
+  </script>
+</head>
+
+<body>
+  <div class="container">
+    <!-- Enhanced Header -->
+    <header class="header fade-in">
+      <div class="header-content">
+        <h1 class="name">Logeshwaran R</h1>
+        <p class="title">Software Engineer • Java Developer • Computer Science Student</p>
+        
+        <div class="contact-grid">
+          <a href="mailto:logeshwaranr2006@gmail.com" class="contact-item">
+            <span class="contact-icon">📧</span>
+            <span class="contact-text">logeshwaranr2006@gmail.com</span>
+          </a>
+          <a href="tel:+919843434575" class="contact-item">
+            <span class="contact-icon">📱</span>
+            <span class="contact-text">+91 98434 34575</span>
+          </a>
+          <a href="https://www.linkedin.com/in/logeshwaran R" target="_blank" rel="noopener" class="contact-item">
+            <span class="contact-icon">💼</span>
+            <span class="contact-text">LinkedIn Profile</span>
+          </a>
+          <a href="https://github.com/logesh000777r" target="_blank" rel="noopener" class="contact-item">
+            <span class="contact-icon">🔗</span>
+            <span class="contact-text">GitHub Portfolio</span>
+          </a>
+        </div>
+
+        <div class="header-actions">
+          <button class="btn btn-primary" onclick="window.print()">
+            <span>📄</span> Download PDF
+          </button>
+          <a href="mailto:logeshwaranr2006@gmail.com?subject=Job Opportunity" class="btn btn-secondary">
+            <span>✉️</span> Contact Me
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content Grid -->
+    <div class="main-grid">
+      <!-- Left Column -->
+      <div class="slide-in-left">
+        <!-- Professional Summary -->
+        <section class="section">
+          <h2 class="section-title">Professional Summary</h2>
+          <p>
+            Motivated Computer Science student with strong foundation in <strong>Java development</strong>, 
+            <strong>data structures</strong>, and <strong>algorithm design</strong>. Demonstrated experience in 
+            building scalable applications, contributing to open-source projects, and implementing 
+            clean, maintainable code. Passionate about leveraging technology to solve real-world problems 
+            and eager to contribute to innovative software solutions.
+          </p>
+        </section>
+
+        <!-- Core Skills -->
+        <section class="section">
+          <h2 class="section-title">Core Technologies</h2>
+          <div class="skills-grid">
+            <div class="skill-chip">Java</div>
+            <div class="skill-chip">Python</div>
+            <div class="skill-chip">C/C++</div>
+            <div class="skill-chip">JavaScript</div>
+            <div class="skill-chip">HTML/CSS</div>
+            <div class="skill-chip">SQL</div>
+            <div class="skill-chip">Git</div>
+            <div class="skill-chip">OOP</div>
+            <div class="skill-chip">DSA</div>
+            <div class="skill-chip">Swing/JavaFX</div>
+            <div class="skill-chip">Data Analysis</div>
+            <div class="skill-chip">Machine Learning</div>
+          </div>
+        </section>
+
+        <!-- Featured Projects -->
+        <section class="section">
+          <h2 class="section-title">Featured Projects</h2>
+          
+          <div class="item">
+            <div class="item-header">
+              <div>
+                <h3 class="item-title">PCOD Auto-Detection System</h3>
+                <p class="item-subtitle">Medical AI Application • Solo Development</p>
+              </div>
+              <span class="item-date">2025</span>
+            </div>
+            <ul class="item-list">
+              <li>Developed an intelligent medical diagnosis tool using Java and machine learning algorithms</li>
+              <li>Implemented advanced image processing techniques for accurate PCOD detection</li>
+              <li>Built modular architecture with comprehensive input validation and file-based persistence</li>
+              <li>Achieved 85% accuracy in preliminary testing with healthcare dataset</li>
+            </ul>
+            <div class="project-chips">
+              <span class="project-chip">Java</span>
+              <span class="project-chip">Machine Learning</span>
+              <span class="project-chip">Image Processing</span>
+              <span class="project-chip">Healthcare Tech</span>
+              <span class="project-chip">JavaFX</span>
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="item-header">
+              <div>
+                <h3 class="item-title">Open Source Contributions</h3>
+                <p class="item-subtitle">Avarkadai Technology Community</p>
+              </div>
+              <span class="item-date">2025</span>
+            </div>
+            <ul class="item-list">
+              <li>Actively contributed to community-driven Java projects with 50+ commits</li>
+              <li>Resolved critical bugs and enhanced documentation for better developer experience</li>
+              <li>Conducted thorough code reviews following industry best practices</li>
+              <li>Mentored 5+ new contributors in Git workflow and Java development</li>
+            </ul>
+            <div class="project-chips">
+              <span class="project-chip">Open Source</span>
+              <span class="project-chip">Code Review</span>
+              <span class="project-chip">Mentorship</span>
+              <span class="project-chip">Git Workflow</span>
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="item-header">
+              <div>
+                <h3 class="item-title">Lucas Chess Analytics Dashboard</h3>
+                <p class="item-subtitle">Personal Development Tool</p>
+              </div>
+              <span class="item-date">2024</span>
+            </div>
+            <ul class="item-list">
+              <li>Created comprehensive training analytics platform for chess improvement</li>
+              <li>Implemented data visualization with interactive charts and progress tracking</li>
+              <li>Automated data import/export functionality for seamless workflow</li>
+              <li>Integrated performance metrics and streak tracking for motivation</li>
+            </ul>
+            <div class="project-chips">
+              <span class="project-chip">Python</span>
+              <span class="project-chip">Data Visualization</span>
+              <span class="project-chip">Analytics</span>
+              <span class="project-chip">Automation</span>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- Right Column -->
+      <div class="slide-in-right">
+        <!-- Education -->
+        <section class="section">
+          <h2 class="section-title">Education</h2>
+          <div class="item">
+            <div class="item-header">
+              <div>
+                <h3 class="item-title">Bachelor of Computer Science</h3>
+                <p class="item-subtitle">Government Arts College, Erode</p>
+              </div>
+              <span class="item-date">2023 – 2026</span>
+            </div>
+            <ul class="item-list">
+              <li><strong>Relevant Coursework:</strong> Data Structures & Algorithms, Object-Oriented Programming, Database Management, Operating Systems, Computer Networks</li>
+              <li><strong>Academic Excellence:</strong> Consistent top 10% performance</li>
+              <li><strong>Activities:</strong> Coding Club President, Chess Club Member</li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Key Achievements -->
+        <section class="section">
+          <h2 class="section-title">Achievements</h2>
+          <ul class="item-list">
+            <li><strong>FIDE Classical Rating:</strong> 1618 (Top 15% nationally)</li>
+            <li><strong>Competitive Programming:</strong> Solved 200+ problems on various platforms</li>
+            <li><strong>Tech Events:</strong> Winner at BugSmash Intercollegiate Competition</li>
+            <li><strong>Community Impact:</strong> Contributed to 3+ open-source projects</li>
+            <li><strong>Academic Recognition:</strong> Dean's List for academic excellence</li>
+          </ul>
+        </section>
+
+        <!-- Professional Development -->
+        <section class="section">
+          <h2 class="section-title">Certifications</h2>
+          <div class="item">
+            <h3 class="item-title">Java Programming Mastery</h3>
+            <p class="item-subtitle">Oracle Certified • 2025</p>
+          </div>
+          <div class="item">
+            <h3 class="item-title">Python for Data Science</h3>
+            <p class="item-subtitle">IBM Data Science • 2024</p>
+          </div>
+          <div class="item">
+            <h3 class="item-title">Git & Version Control</h3>
+            <p class="item-subtitle">GitHub Learning Lab • 2024</p>
+          </div>
+        </section>
+
+        <!-- Technical Interests -->
+        <section class="section">
+          <h2 class="section-title">Technical Interests</h2>
+          <div class="skills-grid">
+            <div class="skill-chip">AI/ML</div>
+            <div class="skill-chip">Cloud Computing</div>
+            <div class="skill-chip">DevOps</div>
+            <div class="skill-chip">Competitive Programming</div>
+            <div class="skill-chip">Open Source</div>
+            <div class="skill-chip">Chess Analytics</div>
+          </div>
+        </section>
+
+        <!-- Call to Action -->
+          <div class="connect-actions">
+            <a href="mailto:logeshwaranr2006@gmail.com" class="btn btn-primary">
+              📧 Email Me
+            </a>
+            <a href="https://www.linkedin.com/in/logeshwaranr" target="_blank" rel="noopener" class="btn btn-secondary">
+              💼 LinkedIn
+            </a>
+          </div>
+              📧 Email Me
+            </a>
+            <a href="https://www.linkedin.com/in/logeshwaranr" target="_blank" rel="noopener" class="btn btn-secondary">
+              💼 LinkedIn
+            </a>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Enhanced interactivity
+    document.addEventListener('DOMContentLoaded', function() {
+      // Animate sections on scroll
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.style.animation = 'fadeIn 0.6s ease-out forwards';
+          }
+        });
+      }, observerOptions);
+
+      document.querySelectorAll('.section').forEach(section => {
+        observer.observe(section);
+      });
+
+      // Enhanced skill chip interactions
+      document.querySelectorAll('.skill-chip').forEach(chip => {
+        chip.addEventListener('click', function() {
+          this.style.transform = 'scale(0.95)';
+          setTimeout(() => {
+            this.style.transform = '';
+          }, 150);
+        });
+      });
+
+      // Contact form enhancement
+      document.querySelectorAll('a[href^="mailto:"]').forEach(link => {
+        link.addEventListener('click', function(e) {
+          // Add analytics tracking here if needed
+          console.log('Email contact initiated');
+        });
+      });
+
+      // Print optimization
+      window.addEventListener('beforeprint', function() {
+        document.body.classList.add('print-mode');
+      });
+
+      window.addEventListener('afterprint', function() {
+        document.body.classList.remove('print-mode');
+      });
+
+      // Keyboard navigation
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'p' && (e.ctrlKey || e.metaKey)) {
+          e.preventDefault();
+          window.print();
+        }
+      });
+
+      // Performance optimization
+      let ticking = false;
+      
+      function updateScrollPosition() {
+        const scrolled = window.pageYOffset;
+        const header = document.querySelector('.header');
+        
+        if (scrolled > 100) {
+          header.style.transform = 'translateY(-5px)';
+          header.style.boxShadow = 'var(--shadow-lg)';
+        } else {
+          header.style.transform = 'translateY(0)';
+          header.style.boxShadow = 'var(--shadow-md)';
+        }
+        
+        ticking = false;
+      }
+
+      function requestTick() {
+        if (!ticking) {
+          requestAnimationFrame(updateScrollPosition);
+          ticking = true;
+        }
+      }
+
+      window.addEventListener('scroll', requestTick);
+
+      // Enhanced copy functionality
+      function copyToClipboard(text) {
+        navigator.clipboard.writeText(text).then(function() {
+          console.log('Copied to clipboard: ' + text);
+        });
+      }
+
+      // Add copy functionality to contact info
+      document.querySelectorAll('.contact-item').forEach(item => {
+        const text = item.querySelector('.contact-text');
+        if (text) {
+          item.addEventListener('dblclick', function() {
+            copyToClipboard(text.textContent);
+            
+            // Visual feedback
+            const originalBg = this.style.background;
+            this.style.background = 'var(--accent-primary)';
+            this.style.color = 'white';
+            
+            setTimeout(() => {
+              this.style.background = originalBg;
+              this.style.color = '';
+            }, 500);
+          });
+        }
+      });
+
+      // Theme toggle (optional enhancement)
+      function toggleTheme() {
+        const currentTheme = document.documentElement.getAttribute('data-theme');
+        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+        document.documentElement.setAttribute('data-theme', newTheme);
+        localStorage.setItem('theme', newTheme);
+      }
+
+      // Load saved theme
+      const savedTheme = localStorage.getItem('theme');
+      if (savedTheme) {
+        document.documentElement.setAttribute('data-theme', savedTheme);
+      }
+
+      console.log('Resume loaded successfully! 🚀');
+    });
+  </script>
